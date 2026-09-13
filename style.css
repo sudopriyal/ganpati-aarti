@@ -1,0 +1,181 @@
+/* ---------- General ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #fff8ed;
+}
+
+
+/* ---------- Main Page ---------- */
+
+.container {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+}
+
+
+/* ---------- Ganpati Image ---------- */
+
+.ganpati-image {
+    width: min(80vw, 500px);
+    height: auto;
+
+    display: block;
+
+    margin-bottom: 30px;
+}
+
+
+/* ---------- Aarti Button ---------- */
+
+.buttons button {
+    padding: 12px 35px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #e67e22;
+    color: white;
+
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+    background: #d35400;
+}
+
+
+/* ---------- Popup ---------- */
+
+.popup {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+
+/* JavaScript adds this class */
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ---------- Popup Content ---------- */
+
+.popup-content {
+    position: relative;
+
+    width: min(90vw, 700px);
+    max-height: 90vh;
+
+    padding: 20px;
+
+    background: white;
+    border-radius: 12px;
+
+    overflow: auto;
+}
+
+
+/* ---------- Aartia and Thaal Image ---------- */
+
+.aarti-image,
+.thaal-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    object-fit: contain;
+}
+
+/* ---------- Close Button ---------- */
+
+.close-button {
+    position: absolute;
+
+    top: 8px;
+    right: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: #333;
+
+    font-size: 25px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.close-button:hover {
+    background: #eeeeee;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .popup-content {
+        width: 95vw;
+        padding: 12px;
+    }
+
+}
+
+.heading{
+    color: #d35400;
+}
