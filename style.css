@@ -127,11 +127,17 @@ body {
 
 .popup-content {
     position: relative;
+
+    /* Larger screens */
     width: clamp(400px, 60vw, 700px);
-    max-height: 90vh;
+
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+
     padding: 10px;
     background: white;
     border-radius: 12px;
+
     overflow: auto;
 }
 
@@ -141,6 +147,7 @@ body {
 .thaal-image {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -150,19 +157,24 @@ body {
     position: absolute;
     top: 8px;
     right: 8px;
+
     width: 35px;
     height: 35px;
+
     border: none;
     border-radius: 50%;
+
     background: white;
     color: #333;
+
     font-size: 25px;
     line-height: 1;
+
     cursor: pointer;
     z-index: 10;
 }
 
-/* ---------- Mobile ---------- */
+/* ---------- Narrow Devices ---------- */
 
 @media (max-width: 600px) {
 
@@ -171,14 +183,15 @@ body {
     }
 
     .popup-content {
-        width: 90%;
-        max-width: none;
+        width: calc(100vw - 20px);
+        max-width: calc(100vw - 20px);
         padding: 12px;
     }
 
     .aarti-image,
     .thaal-image {
         width: 100%;
+        max-width: 100%;
     }
 }
 
