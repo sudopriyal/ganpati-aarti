@@ -127,17 +127,12 @@ body {
 
 .popup-content {
     position: relative;
-
-    /* Larger screens */
     width: clamp(400px, 60vw, 700px);
-
-    max-width: calc(100vw - 20px);
-    max-height: calc(100vh - 20px);
-
+    max-width: 100%;
+    max-height: 90vh;
     padding: 10px;
     background: white;
     border-radius: 12px;
-
     overflow: auto;
 }
 
@@ -174,7 +169,7 @@ body {
     z-index: 10;
 }
 
-/* ---------- Narrow Devices ---------- */
+/* ---------- Mobile ---------- */
 
 @media (max-width: 600px) {
 
@@ -183,8 +178,10 @@ body {
     }
 
     .popup-content {
-        width: calc(100vw - 20px);
-        max-width: calc(100vw - 20px);
+        width: 90vw;
+        max-width: 90vw;
+        min-width: 0;
+
         padding: 12px;
     }
 
@@ -192,6 +189,7 @@ body {
     .thaal-image {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
     }
 }
 
@@ -226,8 +224,8 @@ footer{
     top: 15px;
     left: 15px;
 
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
 
     display: flex;
     align-items: center;
