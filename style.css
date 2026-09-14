@@ -15,18 +15,15 @@
 body {
     min-height: 100vh;
     margin: 0;
+
     font-family: "League Spartan", sans-serif;
     background: #fff8ed;
-
-    display: flex;
-    flex-direction: column;
 }
-
 
 /* ---------- Main Page ---------- */
 
 .container {
-    flex: 1;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -34,7 +31,8 @@ body {
     justify-content: center;
 
     padding: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
+
     text-align: center;
 }
 
@@ -207,10 +205,12 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+
     width: 100%;
 
     font-family: "League Spartan", sans-serif;
     text-align: center;
+
     padding: 10px;
 
     color: #7a2828;
